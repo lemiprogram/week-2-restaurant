@@ -1,0 +1,179 @@
+/* 
+            ********************************************
+                                General
+            ********************************************    
+*/
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+}
+:root{
+    --light-lavender:#aab0ff61;
+    --dark-grey:#4a4a4a;
+    --light-grey:#898787;
+    --dark-blue:#1d385a;
+    --dark-green:#a8b49e;
+    --light-green:#c9cfc2;
+    --lighter-green:#e5eedc;
+}
+html{
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+ul{
+    display: flex;
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: var(--dark-blue);
+}
+svg{
+    width: 2em;
+}
+/* 
+            ********************************************
+                                Header
+            ********************************************    
+*/
+header{
+    padding: 0.3em 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    box-shadow: 0em .04em 6em .01em #000;
+}
+header .heading a{
+    color: var(--dark-blue);
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    font-weight:700;
+    font-size: 3em;
+    
+}
+nav{
+    height: 100%;
+
+}
+nav ul li{
+    height: 100%;
+
+}
+nav ul li a{
+    color:var(--dark-green);
+    font-weight: 600;
+    padding: 1.4em 1.4em;
+}
+nav ul li a:hover{
+    color: var(--dark-grey);
+}
+.focus-nav{
+    background: var(--light-lavender);
+    color: var(--dark-blue);
+}
+.svg-cart{
+    width: 1.3em;
+}
+.svg-user{
+    width: 1em;
+    border: 1.6px solid #000;
+    background-color: #cfcfcf;
+    border-radius: 50%;
+}
+/* 
+            ********************************************
+                                Main
+            ********************************************    
+*/
+main{
+    height: 100vh;
+    background: linear-gradient(180deg, #fff, var(--light-green));
+    color: whitesmoke;
+    backdrop-filter: blur(8px);
+}
+/* 
+            ********************************************
+                                Footer
+            ********************************************    
+*/
+footer{
+    height: 100vh;
+    color: var(--dark-blue);
+    font-size: 0.9em;
+}
+.footer-addOns, .footer-subscription{
+    padding: 1em 2em;
+
+}
+.footer-subscription{
+    height: 30%;
+    background-color: var(--light-green);
+
+}
+.inp-btns{
+    display: flex;
+}
+.socials-form label{
+display: block;
+}
+.socials-form input, .socials-form input:focus{
+    padding: .4em .7em;
+    width: 30em;
+    font-size: .8em;
+    border-radius: 20px 0 0 20px;
+    border: none;
+    outline: none;
+    transform: scale(1);
+}
+
+.socials-btn {
+    color: #fff;
+    background-color: var(--dark-blue);
+    border: none;
+    padding: .4em 1.7em;
+    border-radius:20px;
+
+}
+.sub-btn{
+    border-radius: 0 20px 20px 0;
+}
+.footer-addOns{
+    padding-top: 4em;
+    height: 70%;
+    background-color: var(--dark-green);
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    font-weight: 600;
+}
+
+h2, h2 + p{
+    display: inline;
+}
+.addOns-info {
+    display: flex;
+    gap: 60%;
+}
+.info-contacts{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.contacts-locations ul, .info-menu ul{
+    display: flex;
+    flex-direction: column;
+}
+.addOns-legals{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.addOns-legals ul li:not(:nth-child(1)){    
+    padding-left:1em;
+    margin-left: 1em;
+    border-left: 1.5px solid var(--dark-blue);
+}
+
