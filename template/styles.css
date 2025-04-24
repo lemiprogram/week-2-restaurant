@@ -74,6 +74,7 @@ nav ul li a{
     color:var(--dark-green);
     font-weight: 600;
     padding: 1.4em 1.4em;
+    display: block;
 }
 nav ul li a:hover{
     color: var(--dark-grey);
@@ -185,21 +186,49 @@ h2, h2 + p{
 }
 
 
-
-/* media nav */
 .menu-icon{
     display: none;
 }
-.menu-icon:hover + nav{
-    display: block;
-    position: absolute;
-    top: 0;
-    right:0%;
-    padding-bottom: 20px;
+.menu-icon svg {
+    width: 20px;
+    
 }
-.menu-icon:hover + nav ul{
-    text-align: center;
-    justify-content: end;
-    flex-direction: row-reverse;
+/* media nav */
+@media only screen and (max-width:770px){
+    .menu-icon{
+        display: block;
+    }
+    .reg-nav{
+        display: none;
+    }
+    .menu-icon:hover + .reg-nav{
+        display: block;
+    }
+    .reg-nav:hover{
+        margin: -1em 0 -1em 0;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        
+    }
+    .reg-nav:hover ul {
+        flex-direction: row-reverse;
+        margin: 0;
+    }
+    .reg-nav:hover ul li {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin: 0 -1em 1.3em 0 ;
+
+    }
+    .reg-nav:hover ul li a{
+    }
+    .menu-icon:has(+ .reg-nav:hover),.heading:has(+.menu-icon + .reg-nav:hover){
+        display: none;
+    }
+    /* timing */
+    
     
 }
