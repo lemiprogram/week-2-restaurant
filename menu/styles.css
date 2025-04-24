@@ -1,0 +1,44 @@
+main{
+    padding-top: 2em;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    gap: 1em  0;
+}
+.intro-heading , .heading-span{
+    font-size: 1.3em;
+    font-weight: 800;
+}
+.heading-span{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.intro-info{
+    font-weight: 400;
+}
+.menu-images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    column-gap: 1em;
+}
+.menu-card{
+    display: flex;
+    flex-direction: column;
+}
+.menu-images img{
+    border-radius: 10px;
+    width: 578px;
+    height: 330px;
+}
+.menu-images p{
+    margin-inline: auto;
+    padding: 10px 0 30px 0;
+    font-size: 1.1em;
+    color: var(--dark-blue);
+
+}
+
+
+

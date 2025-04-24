@@ -34,6 +34,11 @@ a{
 svg{
     width: 2em;
 }
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 /* 
             ********************************************
                                 Header
@@ -41,11 +46,14 @@ svg{
 */
 header{
     padding: 0.3em 1.5em;
+    width: 99%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: flxed;
+    border-radius: 0 0px 30px 30px;
     z-index: 2;
-    box-shadow: 0em .04em 6em .01em #000;
+    box-shadow: 0 7px 3em   var(--light-lavender);
 }
 header .heading a{
     color: var(--dark-blue);
@@ -89,10 +97,8 @@ nav ul li a:hover{
             ********************************************    
 */
 main{
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(180deg, #fff, var(--light-green));
-    color: whitesmoke;
-    backdrop-filter: blur(8px);
 }
 /* 
             ********************************************
@@ -139,6 +145,7 @@ display: block;
 }
 .sub-btn{
     border-radius: 0 20px 20px 0;
+    margin-right: 10px;
 }
 .footer-addOns{
     padding-top: 4em;
@@ -172,8 +179,27 @@ h2, h2 + p{
     gap: 1em;
 }
 .addOns-legals ul li:not(:nth-child(1)){    
+    border-left: 1.5px solid var(--dark-blue);
     padding-left:1em;
     margin-left: 1em;
-    border-left: 1.5px solid var(--dark-blue);
 }
 
+
+
+/* media nav */
+.menu-icon{
+    display: none;
+}
+.menu-icon:hover + nav{
+    display: block;
+    position: absolute;
+    top: 0;
+    right:0%;
+    padding-bottom: 20px;
+}
+.menu-icon:hover + nav ul{
+    text-align: center;
+    justify-content: end;
+    flex-direction: row-reverse;
+    
+}
