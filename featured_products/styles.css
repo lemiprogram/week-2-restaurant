@@ -1,0 +1,12 @@
+main{
+    display: flex;
+    align-items: center;
+    width: 100vw;
+}
+main .no-products{
+    margin-inline: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3em;
+    font-weight: 600;
+    color: var(--dark-green);
+}
