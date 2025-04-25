@@ -195,6 +195,9 @@ h2, h2 + p{
 }
 /* media nav */
 @media only screen and (max-width:770px){
+    img{
+        width: calc(100vw - 20px);
+    }
     .menu-icon{
         display: block;
     }
@@ -229,4 +232,9 @@ h2, h2 + p{
     /* timing */
     
     
+}
+@media only screen and (max-width:590px) {
+    .pizza-img{
+        z-index: 3;
+    }
 }

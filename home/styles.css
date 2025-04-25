@@ -1,5 +1,6 @@
 :root{
-    --primary-font-color:#000000;
+    --primary-color:#000000;
+    --secondary-color:#ffffff;
 }
 main{
     display: flex;
@@ -12,6 +13,9 @@ main{
     justify-content: space-around;
     padding: 20px 0;
     flex-wrap: wrap;
+}
+.main-body img{
+    width: calc(50vw - 20px);
 }
 .main-header{
     height: 100vh;
@@ -28,11 +32,37 @@ main{
     right: 3%;
     
 }
+.outer-btn{
+    position: absolute;
+    top: 48%;
+    right: 50%;
+}
+.header-btn{
+    background-color: var(--primary-color);
+    
+    z-index: 10;
+    height: 70px;
+    width:300px;
+    border-radius: 20px;
+}
+.header-btn  a{
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    place-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 1.3em;
+    font-weight: 700;
+}
+.inner-btn{
+    display: none;
+}
 .cake-img{
     z-index:  1;
 }
 .header-nav .heading a{
-    color: var(--primary-font-color);
+    color: var(--primary-color);
     
     font-family:Georgia, 'Times New Roman', Times, serif ;
     font-weight:700;
@@ -43,13 +73,13 @@ main{
     flex-direction: column;
 }
 .header-nav nav ul li a {
-    color: var(--primary-font-color);
+    color: var(--primary-color);
     
     display: flex;
     align-items: center;
     gap: 1.3em;
     padding: .8em 0;
-    border-top: 1.25px solid var(--primary-font-color);
+    border-top: 1.25px solid var(--primary-color);
 }
 
 .nav-icon,.nav-text{
@@ -66,26 +96,37 @@ main{
 @media only screen and (max-width:700px) {
 
     :root{
-        --primary-font-color: #ffffff;
+        --primary-color: #ffffff;
+        --secondary-color: #000000;
     }
-    nav{
+    nav,.inner-btn{
         display: block;
     }
+
     .header-nav{
         top: 10%;
-        right: 30%;
+        right: calc(10% + 20vw);
     }
-    .nav-icon{
+    .nav-icon,.outer-btn{
         display: none;
     }
     .header-nav nav ul li a{
         justify-content: center;
-        border-top: 2px solid var(--primary-font-color);
+        border-top: 2px solid var(--primary-color);
     }
     .steak-img{
         z-index: 2;
     }
     .main-body{
         gap: 20px;
+    }
+    
+    .main-body img{
+        width: calc(100vw - 20px);
+    }
+}
+@media only screen and (max-width:590px) {
+    .header-nav{
+        right: 20%;
     }
 }
