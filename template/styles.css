@@ -223,8 +223,6 @@ h2, h2 + p{
         margin: 0 -1em 1.3em 0 ;
 
     }
-    .reg-nav:hover ul li a{
-    }
     .menu-icon:has(+ .reg-nav:hover),.heading:has(+.menu-icon + .reg-nav:hover){
         display: none;
     }
